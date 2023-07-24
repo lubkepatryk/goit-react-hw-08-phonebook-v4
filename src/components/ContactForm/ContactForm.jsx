@@ -77,6 +77,7 @@ import css from './ContactForm.module.css';
 import { useDispatch } from 'react-redux';
 import { addContact } from '../../redux/contacts/operations';
 import { nanoid } from 'nanoid';
+import Button from '@mui/material/Button';
 
 export const ContactForm = () => {
   const [name, setName] = useState('');
@@ -134,7 +135,7 @@ export const ContactForm = () => {
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
         />
-        <button className={css.formButton}>Add contact</button>
+        <Button variant="contained">Add contact</Button>
       </form>
     </div>
   );
