@@ -2,6 +2,8 @@ import css from './Filter.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { getFilter } from '..//../redux/contacts/selectors';
 import { setFilter } from '..//../redux/contacts/operations';
+import TextField from '@mui/material/TextField';
+
 
 export const Filter = () => {
   const dispatch = useDispatch();
@@ -13,8 +15,9 @@ export const Filter = () => {
 
   return (
     <div>
+      <h2>Search contacts</h2>
       <label className={css.filterLabel}>Find contacts by Name </label>
-      <input
+      <TextField id="standard-basic" variant="standard"
         className={css.filterName}
         type="text"
         name="filter"

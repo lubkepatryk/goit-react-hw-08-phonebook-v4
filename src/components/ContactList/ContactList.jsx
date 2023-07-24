@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import { delContact } from 'redux/contacts/operations';
 import { useDispatch } from 'react-redux';
 import Button from '@mui/material/Button';
+import css from './ContactList.module.css';
 
 // export const ContactList = () => {
 //   const contacts = useSelector(selectAllContacts);
@@ -27,9 +28,9 @@ export const ContactList = ({ id }) => {
   //const handleDelete = () => dispatch(deleteContact(id));
   const handleDelete = () => dispatch(delContact(id));
   return (
-    <ul>
+    <ul className={css.list}>
       {contacts.map((contact, id) => (
-        <li key={id}>
+        <li className={css.item} key={id}>
           {contact.name} {contact.number}
           <Button
             variant="contained"

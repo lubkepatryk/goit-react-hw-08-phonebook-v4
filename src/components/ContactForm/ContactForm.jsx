@@ -78,23 +78,24 @@ import { useDispatch } from 'react-redux';
 import { addContact } from '../../redux/contacts/operations';
 import { nanoid } from 'nanoid';
 import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 export const ContactForm = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
   const dispatch = useDispatch();
 
-  const handleChangeName = (event) => {
+  const handleChangeName = event => {
     const value = event.target.value;
     setName(value);
   };
 
-  const handleChangeNumber = (event) => {
+  const handleChangeNumber = event => {
     const value = event.target.value;
     setNumber(value);
   };
 
-  const handleFormSubmit = (event) => {
+  const handleFormSubmit = event => {
     event.preventDefault();
     dispatch(addContact({ nameText: name, numberText: number }));
     setName('');
@@ -106,11 +107,13 @@ export const ContactForm = () => {
 
   return (
     <div>
+      <h2>Add new contact</h2>
       <form className={css.form} onSubmit={handleFormSubmit}>
         <label className={css.label} htmlFor={loginNameId}>
           Name
         </label>
-        <input
+        <TextField
+          variant="standard"
           id={loginNameId}
           onChange={handleChangeName}
           value={name}
@@ -125,7 +128,8 @@ export const ContactForm = () => {
           {' '}
           Number{' '}
         </label>
-        <input
+        <TextField
+          variant="standard"
           id={loginNumberId}
           onChange={handleChangeNumber}
           value={number}
