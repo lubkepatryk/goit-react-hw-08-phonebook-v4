@@ -1,11 +1,11 @@
 import { useDispatch } from 'react-redux';
-import { deleteContact } from 'redux/contacts/operations';
+import { delContact } from 'redux/contacts/operations';
 import css from './Contact.module.css';
 import Button from '@mui/material/Button';
 
 export const Contact = ({ id, name, number }) => {
   const dispatch = useDispatch();
-  const handleDelete = () => dispatch(deleteContact(id));
+  const handleDelete = () => dispatch(delContact(id));
 
   return (
     <div className={css.wrapper}>
