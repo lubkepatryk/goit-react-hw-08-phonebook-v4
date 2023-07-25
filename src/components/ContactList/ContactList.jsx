@@ -12,7 +12,7 @@ export const ContactList = ({ contacts }) => {
     <ul className={css.list}>
       {contacts.map((contact) => (
         <li className={css.item} key={contact.id}>
-          {contact.name} {contact.number}
+          <span className={css.phoneNumber}>{contact.name} {contact.number}</span>
           <Button
             variant="contained"
             type="button"

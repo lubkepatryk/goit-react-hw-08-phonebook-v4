@@ -1,9 +1,12 @@
+.formHeading {
+  margin-block: 15px;
+}
+
 .form {
     display: flex;
     width: 100%;
     gap: 4px;
-    margin-bottom: 12px;
-  }
+     }
   
   .input {
     flex-grow: 1;

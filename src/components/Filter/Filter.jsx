@@ -14,8 +14,8 @@ export const Filter = () => {
   };
 
   return (
-    <div>
-      <h2>Search contacts</h2>
+    <div className={css.filterContainer}>
+      <h2 className={css.filterHeading}>Search contacts</h2>
       <label className={css.filterLabel}>Find contacts by Name </label>
       <TextField id="standard-basic" variant="standard"
         className={css.filterName}

@@ -33,7 +33,7 @@ export const ContactForm = () => {
 
   return (
     <div>
-      <h2>Add new contact</h2>
+      <h2 className={css.formHeading}>Add new contact</h2>
       <form className={css.form} onSubmit={handleFormSubmit}>
         <label className={css.label} htmlFor={loginNameId}>
           Name

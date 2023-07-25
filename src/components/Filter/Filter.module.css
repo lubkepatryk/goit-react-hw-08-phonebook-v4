@@ -6,3 +6,7 @@
   .filterLabel {
     margin-block: 15px;
   }
+
+  .filterContainer, .filterHeading {
+    padding-block: 15px;
+  }
